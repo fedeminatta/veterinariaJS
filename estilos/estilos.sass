@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap')
+
+*
+    scroll-behavior: smooth
+
+body
+    font-family: 'Open Sans', sans-serif
+
+.datos
+    background: none
+    position: fixed
+    transition: transform .6s
+    left: 50%
+    transform: translate(-50%,0)
+    width: auto
+    max-width: 95%
+    .form
+        background: #ffffff3f
+        border-radius: 10px
+        padding: 60px 0
+        display: flex
+        flex-flow: column wrap
+        align-content: center
+        gap: 20px
+        width: 900px
+        max-width: 100%
+        margin: 40px auto
+        input
+            padding: 10px
+            border-radius: 5px
+            border: none
+            width: 80%
+            outline: none
+        textarea
+            background: #4800cf73
+            color: #fff
+            padding: 15px
+            border-radius: 5px
+            border: none
+            min-width: 80%
+            max-width: 80%
+            min-height: 150px
+            max-height: 200px
+            outline: none
+            transition: background .3s
+            &::placeholder
+                color: #fff
+            &:hover
+                background: #4800cfb4
+.btn
+    padding: 10px
+    width: 200px
+    margin: auto
+    border-radius: 4px
+    border: solid 4px #3d009e
+    color: #fff
+    background: none
+    transition: background .3s
+    &:hover
+        background: #3d009e
+        cursor: pointer
+
+.contenido
+    overflow-x: hidden
+    overflow-y: auto
+    width: 900px
+    max-width: 95%
+    height: 90%
+    position: fixed
+    left: 50%
+    background: #ffffff3f
+    margin-top: 40px
+    display: flex
+    gap: 20px
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-content: flex-start
+    transform: translateX(2000px)
+    transition: transform .6s
+    border-radius: 10px
+    padding-bottom: 20px
+    .btn
+        margin: 0
+        background: #3d009e
+        &:hover
+            background: #fff
+            color: #3d009e
+    header
+        display: flex
+        flex-flow: row wrap
+        gap: 20px
+        align-items: baseline
+        justify-content: space-between
+        order: -1
+        position: sticky
+        top: 0
+        right: 0
+        width: 100%
+        padding: 20px
+        background: #ffffff60
+    .pacientes
+        display: flex
+        flex-flow: column wrap
+        gap: 20px
+
+.contenedor
+    background: #3d009e63
+    padding: 20px
+    color: #fff
+    border-radius: 5px
+    width: 600px
+    max-width: 95%
+    margin: auto
+    line-height: 25px
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    min-height: 150px
+    gap: 20px
+    overflow: auto
+    &:hover
+        background: #4800cfb4
+    i
+        font-size: 18px
+        margin-left: 10px
+        &:hover
+            cursor: pointer
+
+#up
+    color: #fff
+    font-size: 22px
+    transition: transform .3s
+    &:hover
+        cursor: pointer
+        color: #4800cf
+        transform: translateY(-3px)
+
+.mensaje
+    position: absolute
+    bottom: 50px
+    left: -1000px
+    color: #fff
+    background: #4800cfb4
+    padding: 15px
+    border-radius: 5px
+    transition: left .5s

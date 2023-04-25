@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.datos {
+  background: none;
+  position: fixed;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: auto;
+  max-width: 95%;
+}
+.datos .form {
+  background: rgba(255, 255, 255, 0.2470588235);
+  border-radius: 10px;
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 20px;
+  width: 900px;
+  max-width: 100%;
+  margin: 40px auto;
+}
+.datos .form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 80%;
+  outline: none;
+}
+.datos .form textarea {
+  background: rgba(72, 0, 207, 0.4509803922);
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  min-width: 80%;
+  max-width: 80%;
+  min-height: 150px;
+  max-height: 200px;
+  outline: none;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.datos .form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.datos .form textarea::-moz-placeholder {
+  color: #fff;
+}
+.datos .form textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.datos .form textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.datos .form textarea::placeholder {
+  color: #fff;
+}
+.datos .form textarea:hover {
+  background: rgba(72, 0, 207, 0.7058823529);
+}
+
+.btn {
+  padding: 10px;
+  width: 200px;
+  margin: auto;
+  border-radius: 4px;
+  border: solid 4px #3d009e;
+  color: #fff;
+  background: none;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #3d009e;
+  cursor: pointer;
+}
+
+.contenido {
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 900px;
+  max-width: 95%;
+  height: 90%;
+  position: fixed;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.2470588235);
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-transform: translateX(2000px);
+          transform: translateX(2000px);
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+.contenido .btn {
+  margin: 0;
+  background: #3d009e;
+}
+.contenido .btn:hover {
+  background: #fff;
+  color: #3d009e;
+}
+.contenido header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 20px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  position: sticky;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.3764705882);
+}
+.contenido .pacientes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 20px;
+}
+
+.contenedor {
+  background: rgba(61, 0, 158, 0.3882352941);
+  padding: 20px;
+  color: #fff;
+  border-radius: 5px;
+  width: 600px;
+  max-width: 95%;
+  margin: auto;
+  line-height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 150px;
+  gap: 20px;
+  overflow: auto;
+}
+.contenedor:hover {
+  background: rgba(72, 0, 207, 0.7058823529);
+}
+.contenedor i {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.contenedor i:hover {
+  cursor: pointer;
+}
+
+#up {
+  color: #fff;
+  font-size: 22px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+#up:hover {
+  cursor: pointer;
+  color: #4800cf;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.mensaje {
+  position: absolute;
+  bottom: 50px;
+  left: -1000px;
+  color: #fff;
+  background: rgba(72, 0, 207, 0.7058823529);
+  padding: 15px;
+  border-radius: 5px;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+}/*# sourceMappingURL=estilos.css.map */
