@@ -11,6 +11,22 @@ const inputSintomas = document.querySelector('#sintomas');
 const formulario = document.querySelector('.form');
 const mensaje = document.querySelector('.mensaje');
 
+// array y obj de mascota
+let listaMascotas = [];
+let objMascota = {
+	nombre: '',
+	mascota: '',
+	tiempo: '',
+	sintomas: '',
+	id: '',
+};
+
+// Cargar LS
+document.addEventListener('DOMContentLoaded', () => {
+	listaMascotas = JSON.parse(localStorage.getItem('mascota')) || [];
+	mostrarPacientes();
+});
+
 // Mover div
 btn.addEventListener('click', function () {
 	form.style.transform = 'translateX(-3000px)';
@@ -31,16 +47,6 @@ up.addEventListener('click', () => {
 	contenido.scroll(0, 0);
 });
 
-// array y obj de mascota
-let listaMascotas = [];
-let objMascota = {
-	nombre: '',
-	mascota: '',
-	tiempo: '',
-	sintomas: '',
-	id: '',
-};
-
 let editando = false;
 
 // al clickear el boton del form
@@ -51,7 +57,12 @@ btnEnviar.addEventListener('click', () => {
 // funciones
 
 function validarFormulario() {
-	if (inputNombre.value === '' || inputMascota === '' || inputSintomas === '' || inputTiempo === '') {
+	if (
+		inputNombre.value === '' ||
+		inputMascota === '' ||
+		inputSintomas === '' ||
+		inputTiempo === ''
+	) {
 		textMensaje('Todos los campos son obligatorios');
 		return;
 	}
@@ -85,9 +96,16 @@ function agregarMascota() {
 
 	mostrarPacientes();
 
+	sincronizarLS();
+
 	formulario.reset();
 
 	limpiarObjeto();
+}
+
+function sincronizarLS() {
+	const guardarMascota = JSON.stringify(listaMascotas);
+	localStorage.setItem('mascota', guardarMascota);
 }
 
 function limpiarObjeto() {
@@ -165,6 +183,7 @@ function editarMascota() {
 	});
 
 	limpiarHTML();
+	sincronizarLS();
 	mostrarPacientes();
 	formulario.reset();
 
@@ -176,6 +195,7 @@ function eliminarPaciente(id) {
 	listaMascotas = listaMascotas.filter((paciente) => paciente.id !== id);
 	textMensaje('Eliminado correctamente');
 	limpiarHTML();
+	sincronizarLS();
 	mostrarPacientes();
 }
 
